@@ -15,8 +15,6 @@ exports.getOneBook = (req, res, next) => {
 
 exports.createBook = (req, res, next) => {
   const bookObject = JSON.parse(req.body.book);
-  delete bookObject._id
-  delete bookObject._userId
   const filename = req.file.originalname; // recupere nom d'origine
   const parts = filename.split("."); //coupe le nom d'origine a son extension 
   const nameWithoutExtension = parts.slice(0, -1).join("."); // retire l'extension 

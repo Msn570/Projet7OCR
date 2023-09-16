@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
  
 module.exports = (req, res, next) => {
-    const tokenSecret = process.env.TRO;
+    const tokenSecret = process.env.TRO; // Utilisation de la clé secrète de l'environnement
    try {
        const token = req.headers.authorization.split(' ')[1];
        const decodedToken = jwt.verify(token, tokenSecret);

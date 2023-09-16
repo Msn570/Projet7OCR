@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-
+// importation des routes d'authentification et de gestion des livres
 const bookRoutes = require('./routes/book');
 const userRoutes = require('./routes/user');
 
